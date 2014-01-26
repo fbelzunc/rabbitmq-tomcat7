@@ -1,0 +1,29 @@
+{
+    "id": "tomcat7-websocket-clickstart",
+    "name": "Websockets on Tomcat 7",
+    "source": "git://github.com/fbelzunc/tomcat7-websocket-clickstart.git",
+    "description" : "Deploy your WebSocket application on Tomcat 7",
+    "doc-url" : "https://github.com/fbelzunc/tomcat7-websocket-clickstart/blob/master/README.md",
+    "icon" : "https://raw.github.com/CloudBees-community/tomcat7-hibernate-jpa-clickstart/master/icon.png",
+
+    "supported-by" : "cloudbees",
+    "order" : 100,
+
+    "runtime": {
+        "type": "tomcat7",
+        "app-parameters" : {
+            "http_version" : "1.1"
+        }
+    },
+    "databases": [
+        {
+            "type": "mysql",
+            "alias": "mydb"
+        }
+    ],
+    "build-with-jenkins": {
+        "template": {
+            "type": "maven"
+        }
+    }
+}
